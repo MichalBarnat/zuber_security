@@ -1,0 +1,3 @@
+name,surname,email,password,user_role
+bartek,bartek,b.bartek@example.com,$2a$10$pcY1W6hKOZlpNumwFlK0rewMz5TY4rz3hmyJrhos36VgW8E/YPxhi,ADMIN
+kasia,kasia,k.kasia@example.com,$2a$10$LzBF9lUgzDFDzyyTIP7yWe7.qiYuzAjjXuWOGcO/32vl.mGbhu4oy,USER

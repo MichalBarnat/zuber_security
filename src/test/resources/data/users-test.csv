@@ -1,0 +1,3 @@
+name,surname,email,password,is_enabled,is_account_non_expired,is_account_non_locked,is_credentials_non_expired,user_role
+bartek,bartek,b.bartek@example.com,$2a$10$YsBHSNUtlxR0sWaZLq4/8exWZQsbpv6/sy1VkFwv9cPOT9b66It2W,true,true,true,true,ADMIN
+kasia,kasia,k.kasia@example.com,$2a$10$KBWXXKNo9FcVVUeDmp6VLudjItG38F5UkD1PQTt5Wrzg2PsWRC0tu,true,true,true,true,USER

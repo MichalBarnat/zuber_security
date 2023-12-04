@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd">
+
+    <changeSet author="bartek" id="2">
+        <loadData encoding="UTF-8" file="data/users-test.csv" quotchar="&quot;" separator="," tableName="_user">
+            <column name="id" header="id"/>
+            <column name="name" header="name"/>
+            <column name="surname" header="surname"/>
+            <column name="email" header="email"/>
+            <column name="password" header="password"/>
+            <column name="is_enabled" header="is_enabled"/>
+            <column name="is_account_non_expired" header="is_account_non_expired"/>
+            <column name="is_account_non_locked" header="is_account_non_locked"/>
+            <column name="is_credentials_non_expired" header="is_credentials_non_expired"/>
+            <column name="user_role" header="user_role"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

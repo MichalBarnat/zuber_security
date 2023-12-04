@@ -1,0 +1,38 @@
+services:
+  postgres:
+    container_name: security_uberApp_postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: security
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - security_uberApp_postgres:/data/postgres
+    ports:
+      - "5438:5432"
+    networks:
+      - security_uberApp_postgres
+    restart: unless-stopped
+
+  pgadmin_security_uberApp:
+    container_name: pgadmin_security_uberApp
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin_security_uberApp:/var/lib/pgadmin
+    ports:
+      - "5053:80"
+    networks:
+      - security_uberApp_postgres
+    restart: unless-stopped
+
+networks:
+  security_uberApp_postgres:
+    driver: bridge
+
+volumes:
+  security_uberApp_postgres:
+  pgadmin_security_uberApp:
