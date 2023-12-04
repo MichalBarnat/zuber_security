@@ -26,6 +26,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 public class SecurityConfig {
 
     private final UserService userService;
+//    private
 
     private static final String[] AUTH_WHITELIST = {
             "/swagger-ui.html",
